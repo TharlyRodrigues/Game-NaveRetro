@@ -1,0 +1,150 @@
+@font-face {
+  font-family: fontRetro;
+  src: url(fonte/retro_computer_personal_use.ttf);
+}
+
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+body * {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(img/img.avif);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#game-container {
+  width: 400px;
+  height: 500px;
+  background-color: #000;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px rgba(49, 207, 104, 0.574);
+}
+
+#player {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid #fcfcfc;
+  position: absolute;
+  bottom: 10px;
+  left: 185px;
+}
+
+.bullet {
+  width: 3px;
+  height: 10px;
+  background-color: #fd0707;
+  position: absolute;
+  box-shadow: 2px 2px 2px rgba(244, 244, 244, 0.462);
+}
+
+.enemy {
+  width: 30px;
+  height: 30px;
+  background-color: #0f0;
+  position: absolute;
+  box-shadow: 4px 4px 8px rgba(49, 207, 104, 0.574);
+}
+
+#score {
+  margin-top: 10px;
+  margin-left: 450px;
+  color: #fff;
+  font-family: fontRetro;
+}
+
+h1 {
+  margin-top: 20px;
+  color: #161616;
+  font-family: fontRetro;
+  color: #fff;
+}
+
+#game-over-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+  display: none;
+  font-family: fontRetro;
+}
+
+#start-button {
+  font-size: 24px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: retroComputer;
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px rgba(49, 207, 104, 0.574);
+  margin-bottom: 20px;
+  font-family: fontRetro;
+}
+
+#player-name {
+  margin-top: 20px;
+  display: none;
+}
+
+#player-name label {
+  font-weight: bold;
+}
+
+#player-name input[type="text"] {
+  margin-left: 5px;
+  padding: 5px;
+}
+
+#player-name button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #0095dd;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#player-name button:hover {
+  background-color: #0077bb;
+}
+
+/* Estilos padrão para o game-container */
+#game-container {
+  width: 600px;
+  height: 400px;
+}
+
+/* Estilos para telas menores que 600px de largura */
+@media (max-width: 600px) {
+  #game-container {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+/* Estilos para telas menores que 400px de altura */
+@media (max-height: 400px) {
+  #game-container {
+    height: 200px;
+  }
+}
